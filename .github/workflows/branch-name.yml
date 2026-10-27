@@ -1,0 +1,43 @@
+name: Check branch name
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited, ready_for_review]
+  workflow_call:
+permissions: {}
+jobs:
+  branch-name:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      # Metadata only: no checkout, secrets, network calls or untrusted shell text.
+      - name: Validate issue-linked branch
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import re
+          import sys
+
+          with open(os.environ['GITHUB_EVENT_PATH'], encoding='utf-8') as stream:
+              event = json.load(stream)
+          pr = event.get('pull_request', {})
+          head = pr.get('head', {})
+          branch = head.get('ref', '')
+          match = re.fullmatch(r'(feature|fix|refactor|chore|docs)/[1-9][0-9]*-([a-z0-9]+(?:-[a-z0-9]+)*)', branch)
+          valid = match is not None and len(match.group(2)) <= 80
+          author = pr.get('user', {})
+          source = head.get('repo') or {}
+          target = pr.get('base', {}).get('repo') or {}
+          dependabot = (
+              author.get('login') == 'dependabot[bot]'
+              and author.get('type') == 'Bot'
+              and bool(source.get('id'))
+              and source.get('id') == target.get('id')
+              and branch.startswith('dependabot/')
+          )
+          if not (valid or dependabot):
+              print('::error::Use feature|fix|refactor|chore|docs/<positive-issue-number>-<lowercase-kebab-slug>; slug maximum 80 characters. Genuine same-repository Dependabot PRs are exempt.')
+              sys.exit(1)
+          print('Branch name accepted.')
+          PY
