@@ -1,0 +1,69 @@
+{
+  "name": "Docs",
+  "description": "Improve information people need to use or maintain the project.",
+  "type": "Docs",
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "Keep this concise. Explain what and why; add detail only when it changes a decision. Opening this issue does not authorize automated implementation."
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "problem",
+      "attributes": {
+        "label": "What is missing or unclear?",
+        "description": "Name the audience and the information they cannot find or understand."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "why",
+      "attributes": {
+        "label": "Why does it matter?",
+        "description": "Explain what readers need to accomplish."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "change",
+      "attributes": {
+        "label": "What should change?",
+        "description": "Name the affected documentation and the information to add, correct, or remove."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "done",
+      "attributes": {
+        "label": "How will we know it is done?",
+        "description": "Describe what readers can do and how examples or instructions will be checked.",
+        "placeholder": "- [ ] ..."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "context",
+      "attributes": {
+        "label": "Useful context",
+        "description": "Optional: sources, links, or constraints."
+      },
+      "validations": {
+        "required": false
+      }
+    }
+  ]
+}

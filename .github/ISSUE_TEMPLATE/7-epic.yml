@@ -1,0 +1,58 @@
+{
+  "name": "Epic",
+  "description": "Coordinate several deliverable issues around one outcome.",
+  "type": "Epic",
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "Keep this concise. Explain what and why; add detail only when it changes a decision. Opening this issue does not authorize automated implementation."
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "outcome",
+      "attributes": {
+        "label": "What outcome are we working toward?",
+        "description": "State the shared problem and desired outcome."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "why",
+      "attributes": {
+        "label": "Why does it matter?",
+        "description": "Name the people or project goals that benefit."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "scope",
+      "attributes": {
+        "label": "What is included?",
+        "description": "Describe the boundary and link known child issues. Add deliverables using GitHub sub-issues; use checklists for small tasks."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "done",
+      "attributes": {
+        "label": "How will we measure success?",
+        "description": "Give outcome-level success criteria. Each implementation child needs its own acceptance criteria and approval.",
+        "placeholder": "- [ ] ..."
+      },
+      "validations": {
+        "required": true
+      }
+    }
+  ]
+}

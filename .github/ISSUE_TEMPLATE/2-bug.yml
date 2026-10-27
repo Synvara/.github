@@ -1,0 +1,69 @@
+{
+  "name": "Bug",
+  "description": "Correct behavior that does not match expectations.",
+  "type": "Bug",
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "Keep this concise. Explain what and why; add detail only when it changes a decision. Opening this issue does not authorize automated implementation."
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "problem",
+      "attributes": {
+        "label": "What happened, and what should happen?",
+        "description": "Describe the actual and expected behavior."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "why",
+      "attributes": {
+        "label": "Why does it matter?",
+        "description": "Describe the impact and who is affected."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "reproduce",
+      "attributes": {
+        "label": "How can we reproduce it?",
+        "description": "Give minimal steps and relevant environment details. If intermittent, describe what is known. Do not include secrets or private customer data."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "done",
+      "attributes": {
+        "label": "How will we know it is fixed?",
+        "description": "State the expected result and the regression check.",
+        "placeholder": "- [ ] ..."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "context",
+      "attributes": {
+        "label": "Useful context",
+        "description": "Optional: sanitized logs, links, or constraints that help diagnose the problem."
+      },
+      "validations": {
+        "required": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "name": "Chore",
+  "description": "Maintain tooling, dependencies, infrastructure, or repository setup.",
+  "type": "Chore",
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "Keep this concise. Explain what and why; add detail only when it changes a decision. Opening this issue does not authorize automated implementation."
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "problem",
+      "attributes": {
+        "label": "What is missing or wrong?",
+        "description": "Describe the current situation in a few sentences."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "why",
+      "attributes": {
+        "label": "Why does it matter?",
+        "description": "Who is affected, and what improves when this is solved?"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "change",
+      "attributes": {
+        "label": "What should change?",
+        "description": "Describe the observable result. Include technical choices only when they constrain the solution."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "done",
+      "attributes": {
+        "label": "How will we know it is done?",
+        "description": "List observable acceptance criteria.",
+        "placeholder": "- [ ] ..."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "constraints",
+      "attributes": {
+        "label": "Constraints or useful context",
+        "description": "Optional: boundaries, dependencies, links, or decisions that affect the work. Omit unrelated detail."
+      },
+      "validations": {
+        "required": false
+      }
+    }
+  ]
+}

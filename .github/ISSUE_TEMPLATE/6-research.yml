@@ -1,0 +1,58 @@
+{
+  "name": "Research",
+  "description": "Answer a bounded question before deciding what to build.",
+  "type": "Research",
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "Keep this concise. Explain what and why; add detail only when it changes a decision. Opening this issue does not authorize automated implementation."
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "question",
+      "attributes": {
+        "label": "What question are we answering?",
+        "description": "State one decision or uncertainty."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "why",
+      "attributes": {
+        "label": "Why does the answer matter?",
+        "description": "Explain which decision or work this will unblock."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "timebox",
+      "attributes": {
+        "label": "What is the timebox and scope?",
+        "description": "Set an effort or date limit and the options or evidence worth investigating."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "done",
+      "attributes": {
+        "label": "What evidence and decision will we deliver?",
+        "description": "Specify the comparison, experiment, or recommendation that completes this research. Link any follow-up implementation issue.",
+        "placeholder": "- [ ] ..."
+      },
+      "validations": {
+        "required": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "name": "Refactor",
+  "description": "Improve internal structure while preserving intended behavior.",
+  "type": "Refactor",
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "Keep this concise. Explain what and why; add detail only when it changes a decision. Opening this issue does not authorize automated implementation."
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "problem",
+      "attributes": {
+        "label": "What is difficult today?",
+        "description": "Name the code or structure and the concrete problem."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "why",
+      "attributes": {
+        "label": "Why does it matter?",
+        "description": "Explain the maintenance, reliability, or development benefit."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "change",
+      "attributes": {
+        "label": "What should change?",
+        "description": "State the boundary of the refactor and which observable behavior must remain the same."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "done",
+      "attributes": {
+        "label": "How will we know it is done?",
+        "description": "Describe evidence that the structure improved and intended behavior is preserved.",
+        "placeholder": "- [ ] ..."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "constraints",
+      "attributes": {
+        "label": "Constraints or useful context",
+        "description": "Optional: compatibility requirements, dependencies, or links."
+      },
+      "validations": {
+        "required": false
+      }
+    }
+  ]
+}
